@@ -13,6 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  padding-bottom: 40px;
 }
 
 /* CABEÇALHO COM LOGO */
@@ -21,6 +23,9 @@ body {
   width: 100%;
   padding: 10px 0;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .logo {
   width: 70px;
@@ -29,7 +34,7 @@ body {
 
 /* CONTAINER PRINCIPAL */
 .container {
-  margin-top: 20px;
+  margin-top: 25px;
   background: linear-gradient(160deg, #000000 0%, #090979 50%, #000000 100%);
   padding: 30px;
   border-radius: 20px;
@@ -38,6 +43,7 @@ body {
   color: white;
   text-align: left;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 /* TÍTULO */
@@ -83,7 +89,7 @@ select:focus {
   box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
 }
 
-/* SELECT CUSTOMIZADO (SETINHA E SOMBRA) */
+/* SELECT CUSTOMIZADO */
 select {
   appearance: none;
   -webkit-appearance: none;
@@ -95,7 +101,6 @@ select {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* OPÇÕES DO SELECT */
 select option {
   background: #0a0a4a;
   color: #fff;
@@ -108,7 +113,7 @@ button {
   display: block;
   margin: 15px auto;
   width: 70%;
-  padding: 10px;
+  padding: 12px;
   border-radius: 25px;
   border: none;
   background: #000;
@@ -143,4 +148,67 @@ button:hover {
   font-size: 16px;
   font-weight: 700;
   backdrop-filter: blur(4px);
+}
+
+/* 📱 RESPONSIVIDADE */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    width: 90%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .linha {
+    font-size: 14px;
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+  }
+}
+
+/* 📲 TELAS MÉDIAS (TABLETS) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 80%;
+    max-width: 500px;
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input,
+  select {
+    font-size: 15px;
+  }
+
+  button {
+    width: 80%;
+  }
 }
