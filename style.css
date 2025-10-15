@@ -13,8 +13,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   min-height: 100vh;
-  padding-bottom: 40px;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* CABEÇALHO COM LOGO */
@@ -36,13 +38,13 @@ body {
 .container {
   margin-top: 25px;
   background: linear-gradient(160deg, #000000 0%, #090979 50%, #000000 100%);
-  padding: 30px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 400px;
+  padding: 25px 20px;
+  border-radius: 18px;
+  width: 95%;
+  max-width: 420px;
   color: white;
-  text-align: left;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
   transition: all 0.3s ease;
 }
 
@@ -51,7 +53,7 @@ h2 {
   text-align: center;
   font-size: 20px;
   font-weight: 900;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: #fdfdfd;
   text-transform: uppercase;
 }
@@ -64,18 +66,18 @@ label {
   margin-bottom: 5px;
 }
 
-/* CAMPOS INPUT & SELECT (BASE) */
+/* CAMPOS INPUT & SELECT */
 input,
 select {
   width: 100%;
-  padding: 12px;
-  border-radius: 30px;
+  padding: 13px;
+  border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   text-align: center;
   font-size: 15px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   font-family: "Arial Black", Arial, sans-serif;
   backdrop-filter: blur(6px);
   transition: 0.3s;
@@ -111,10 +113,10 @@ select option {
 /* BOTÃO CALCULAR */
 button {
   display: block;
-  margin: 15px auto;
-  width: 70%;
-  padding: 12px;
-  border-radius: 25px;
+  margin: 20px auto 10px auto;
+  width: 85%;
+  padding: 14px;
+  border-radius: 30px;
   border: none;
   background: #000;
   color: white;
@@ -123,6 +125,7 @@ button {
   transition: 0.3s;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
 }
 button:hover {
   background: linear-gradient(90deg, #0033cc, #0056b3);
@@ -132,7 +135,6 @@ button:hover {
 /* RESULTADOS */
 .caixa-resultado {
   margin-top: 20px;
-  background: transparent;
 }
 
 .linha {
@@ -140,7 +142,7 @@ button:hover {
   color: #fff;
   border: 1px solid rgba(0, 123, 255, 0.4);
   border-radius: 25px;
-  padding: 12px 18px;
+  padding: 14px 18px;
   margin-top: 12px;
   display: flex;
   justify-content: space-between;
@@ -150,65 +152,57 @@ button:hover {
   backdrop-filter: blur(4px);
 }
 
-/* 📱 RESPONSIVIDADE */
+/* 💡 RESPONSIVIDADE */
+/* 💡 RESPONSIVIDADE */
 @media (max-width: 480px) {
   body {
-    padding: 10px;
+    padding: 5px;
   }
 
   .container {
     width: 100%;
-    padding: 20px 15px;
-    border-radius: 15px;
+    margin-top: 10px;
+    padding: 18px 14px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
   }
 
   h2 {
-    font-size: 18px;
-    margin-bottom: 18px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 1.2;
   }
 
   label {
-    font-size: 13px;
+    font-size: 12.5px;
   }
 
   input,
   select {
-    font-size: 14px;
-    padding: 10px;
+    font-size: 13.5px;
+    padding: 9px 8px;
+    border-radius: 22px;
   }
 
   button {
-    width: 90%;
-    padding: 12px;
-    font-size: 15px;
+    width: 100%;
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 22px;
+    margin-top: 15px;
   }
 
   .linha {
-    font-size: 14px;
     flex-direction: column;
     text-align: center;
-    gap: 4px;
+    gap: 3px;
+    font-size: 13.5px;
+    padding: 8px 10px;
+    border-radius: 20px;
+  }
+
+  .topo .logo {
+    width: 55px;
   }
 }
 
-/* 📲 TELAS MÉDIAS (TABLETS) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .container {
-    width: 80%;
-    max-width: 500px;
-    padding: 25px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  input,
-  select {
-    font-size: 15px;
-  }
-
-  button {
-    width: 80%;
-  }
-}
