@@ -8,8 +8,8 @@ const CONFIG = {
   },
 
   complexidade: {
-    padrao: 2.50, // lucro de 250%
-    media: 3.00,  // lucro de 300%
-    alta: 3.50    // lucro de 350%
+    padrao: 2.50, 
+    media: 3.00,  
+    alta: 3.50   
   }
 };
