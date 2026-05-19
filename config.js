@@ -1,33 +1,15 @@
-// Configurações fixas (iguais à planilha)
+// Configurações fixas da calculadora TCG
 const CONFIG = {
-  valorHora: 5.0, // valor da hora máquina
+  valorHora: 1.0, // R$ 1,00 por hora máquina
 
   filamento: {
-    padrao: 0.60,      // R$/g filamento padrão
-    engenharia: 1.00   // R$/g filamento engenharia
+    padrao: 0.075,      // R$ 0,075 por grama - material padrão
+    engenharia: 0.20    // R$ 0,20 por grama - material de engenharia
   },
 
   complexidade: {
-    padrao: 0,     // 0%
-    media: 0.25,   // +25%
-    alta: 0.40     // +40%
-  },
-
-  // função para calcular desconto gradativo
-  calcularDesconto: function (gramas) {
-    if (gramas <= 50) {
-      return 0;
-    } else if (gramas >= 1000) {
-      return 0.65;
-    } else {
-      // interpolação linear entre 50g (10%) e 1000g (65%)
-      const inicio = 50;
-      const fim = 1000;
-      const descontoInicio = 0.10;
-      const descontoFim = 0.65;
-
-      return descontoInicio + ((gramas - inicio) / (fim - inicio)) * (descontoFim - descontoInicio);
-    }
+    padrao: 2.50, // lucro de 250%
+    media: 3.00,  // lucro de 300%
+    alta: 3.50    // lucro de 350%
   }
 };
-
