@@ -8,7 +8,7 @@
 body {
   font-family: "Arial Black", Arial, sans-serif;
   letter-spacing: 0.5px;
-  background: radial-gradient(circle at top, #1010a0 0%, #050542 45%, #000000 100%);
+  background: radial-gradient(circle at top, #091235 0%, #091235 45%, #000000 100%);
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
